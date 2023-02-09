@@ -33,19 +33,19 @@ file_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(file_path)
 
 
-WIDTH = 800
+WIDTH = 1000
 HEIGHT = 600
 SPRITE_SCALING = 0.5
 
 class MenuView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.WHITE)
+        arcade.set_background_color(arcade.color.PINK)
 
     def on_draw(self):
         arcade.start_render()
         arcade.draw_text("Menu Screen", WIDTH / 2, HEIGHT / 2,
                          arcade.color.BLACK, font_size=50, anchor_x="center")
-        arcade.draw_text("Click to advance", WIDTH / 2, HEIGHT / 2 - 75,
+        arcade.draw_text("Click to continue", WIDTH / 2, HEIGHT / 2 - 75,
                          arcade.color.GRAY, font_size=20, anchor_x="center")
 
     def on_mouse_press(self, _x, _y, _button, _modifiers):
@@ -55,13 +55,13 @@ class MenuView(arcade.View):
 
 class InstructionView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.ORANGE_PEEL)
+        arcade.set_background_color(arcade.color.BLUE)
 
     def on_draw(self):
         arcade.start_render()
-        arcade.draw_text("Instructions Screen", WIDTH / 2, HEIGHT / 2,
+        arcade.draw_text("Instruction Screen", WIDTH / 2, HEIGHT / 2,
                          arcade.color.BLACK, font_size=50, anchor_x="center")
-        arcade.draw_text("Click to advance", WIDTH / 2, HEIGHT / 2 - 75,
+        arcade.draw_text("Click to continue", WIDTH / 2, HEIGHT / 2 - 75,
                          arcade.color.GRAY, font_size=20, anchor_x="center")
 
     def on_mouse_press(self, _x, _y, _button, _modifiers):
@@ -167,7 +167,7 @@ class GameOverView(arcade.View):
         arcade.draw_text("Game Over", 240, 400, arcade.color.WHITE, 54)
         arcade.draw_text("Click to restart", 310, 300, arcade.color.WHITE, 24)
 
-        time_taken_formatted = f"{round(self.time_taken, 2)} seconds"
+        time_taken_formatted = f"{round(self.time_taken, 2)} segundos"
         arcade.draw_text(f"Time taken: {time_taken_formatted}",
                          WIDTH / 2,
                          200,
