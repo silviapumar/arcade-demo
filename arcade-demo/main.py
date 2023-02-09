@@ -55,7 +55,7 @@ class MenuView(arcade.View):
 
 class InstructionView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.VIOLET)
+        arcade.set_background_color(arcade.color.BLUE)
 
     def on_draw(self):
         arcade.start_render()
