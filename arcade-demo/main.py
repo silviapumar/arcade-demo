@@ -55,7 +55,7 @@ class MenuView(arcade.View):
 
 class InstructionView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.BLUE)
+        arcade.set_background_color(arcade.color.VIOLET)
 
     def on_draw(self):
         arcade.start_render()
@@ -87,7 +87,7 @@ class GameView(arcade.View):
         self.player_sprite.center_y = 50
         self.player_list.append(self.player_sprite)
 
-        for i in range(5):
+        for i in range(15):
 
             # Create the coin instance
             coin = arcade.Sprite(":resources:images/items/coinGold.png", SPRITE_SCALING / 3)
@@ -100,7 +100,7 @@ class GameView(arcade.View):
             self.coin_list.append(coin)
 
     def on_show(self):
-        arcade.set_background_color(arcade.color.AMAZON)
+        arcade.set_background_color(arcade.color.BROWN)
 
         # Don't show the mouse cursor
         self.window.set_mouse_visible(False)
